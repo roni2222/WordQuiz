@@ -78,6 +78,30 @@
             font-weight: bold;
         }
 
+        /*לאחר שנבחר כפתור משנה את הצבע ללבן- לא משנה אם זה נכון או לא נכון*/
+        .ui-icon-background, .ui-state-active .ui-icon-background {
+            border: #f2f2f2;
+        }
+
+        /*כפתור*/
+        .button {
+            background-color: #e1e1d0;
+            border: none;
+            color: black;
+            padding: 2px 14px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Felix007 Medium Regular';
+            font-weight: bold;
+            font-size: 22px;
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 7px 7px 7px 3px #afaf83;
+            /*position: fixed;
+            bottom: 0;*/
+        }
+
     </style>
 
     <script>
@@ -133,14 +157,14 @@
         <div class="Answer Answer2" style="display: inline;"><input type="radio" class="radios radios2" name="radio_quetion2" value="WrongAnswer">כוהן גדול</div>
         <div class="Answer Answer2" style="display: inline;"><input type="radio" class="radios radios2" name="radio_quetion2" value="WrongAnswer">חלק פנימי בגוף</div>
     </fieldset>
-    <br />
+    <br/>
 
     <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
         <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">מהי הגרסה הנכונה של הביטוי</legend>
         <div class="Answer Answer3" style="display: inline;"><input type="radio" class="radios radios3" name="radio_quetion3" value="RightAnswer">ליישר את ההדורים</div>
         <div class="Answer Answer3" style="display: inline;"><input type="radio" class="radios radios3" name="radio_quetion3" value="WrongAnswer">ליישב את ההדורים</div>
     </fieldset>
-    <br />
+    <br/>
 
     <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
         <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">מה הפירוש של גדיל</legend>
@@ -149,7 +173,7 @@
         <div class="Answer Answer4" style="display: inline;"><input type="radio" class="radios radios4" name="radio_quetion4" value="WrongAnswer">תקווה, סיכוי</div>
     </fieldset>
     
-    <br />
+    <br/>
     <button class="button" onclick="location.href='index.html'" style="float:right;">לחזרה</button>
 </body>
 </html>
