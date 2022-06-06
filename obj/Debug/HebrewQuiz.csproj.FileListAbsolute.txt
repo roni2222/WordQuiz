@@ -1,0 +1,9 @@
+D:\___לימודים___\projects\HebrewQuiz\bin\HebrewQuiz.dll.config
+D:\___לימודים___\projects\HebrewQuiz\bin\HebrewQuiz.dll
+D:\___לימודים___\projects\HebrewQuiz\bin\HebrewQuiz.pdb
+D:\___לימודים___\projects\HebrewQuiz\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\___לימודים___\projects\HebrewQuiz\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\___לימודים___\projects\HebrewQuiz\obj\Debug\HebrewQuiz.csprojResolveAssemblyReference.cache
+D:\___לימודים___\projects\HebrewQuiz\obj\Debug\HebrewQuiz.csproj.CoreCompileInputs.cache
+D:\___לימודים___\projects\HebrewQuiz\obj\Debug\HebrewQuiz.dll
+D:\___לימודים___\projects\HebrewQuiz\obj\Debug\HebrewQuiz.pdb
