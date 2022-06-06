@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>חידון השפה העברית</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> <!--ג'ייקו'רי זה קובץ אחד ויחיד (תמיד הקובץ הזה שיש לו גרסאות שונות) וזה בעצם ג'ווסקריפט ופה שמנו בגרסה 3.6.0-->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> <!--ג'ייקו'רי יואיי זה קובץ אחד ויחיד (תמיד הקובץ הזה שיש לו גרסאות שונות) חייב לשים קודם כל קישור לג'ייקו'רי כדי להשתמש בקישור הזה ליואיי ופה שמנו בגרסה 1.13.1-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"> <!-- סי אס אס של ג'ייק'רי יואיי, תמיד נשתמש בזה עוזר לאפקטים גם הוא קובץ אחד ויחיד לפי גרסה-->
+
+    <style>
+
+        /*הוספת פונטים שהורדתי למחשב*/
+        @font-face {
+            font-family: "Felix007 Medium Regular";
+            src: url("fonts/Felix007 Medium Regular.ttf");
+        }
+
+        .Font {
+            font-family: "Felix007 Medium Regular";
+        }
+
+        @font-face {
+            font-family: "Gisha";
+            src: url("fonts/Gisha.ttf");
+        }
+
+        .Font {
+            font-family: "Gisha";
+        }
+
+        html {
+            font-family: Gisha;
+            min-height: 100%;
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .Answer {
+            font-size: 14px;
+            font-family: Gisha;
+        }
+
+        /*מעבר העכבר על הכפתורים של החידון*/
+        .ui-state-active,
+        .ui-widget-content .ui-state-active,
+        .ui-widget-header .ui-state-active,
+        a.ui-button:active,
+        .ui-button:active,
+        .ui-button.ui-state-active:hover {
+            background: #F6F6F6;
+            color: #2b2b2b;
+        }
+
+        fieldset .RightAnswer.ui-checkboxradio-checked {
+            border-color: #33cc33;
+            background: #33cc33;
+        }
+
+
+        fieldset .WrongAnswer.ui-checkboxradio-checked {
+            border-color: #ff3333;
+            background: #ff3333;
+        }
+
+        .WrongAnswer {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .RightAnswer {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+
+    <script>
+        $(function () {
+            //החידון
+            //ברגע שלוחצים על כפתור בשאלה מסוימת זה קודם כל מאפס את הרקע של כולם להיות שקוף- בשביל זה שאולי לפני כן מישהו לחץ על תשובה אחרת וזה כבר צבוע אז צריך למחוק את הצבע
+            //איפוס הצבע לכל הכפתורים בכל שאלה לפי השאלה הספציפית שנלחץ בה על כפתור אז מאפס לכולם את הצבעים לשקוף
+            $('.radios1').on('click', function () {
+                $('.Answer1').css('background-color', 'transparent');
+            });
+
+            $('.radios2').on('click', function () {
+                $('.Answer2').css('background-color', 'transparent');
+            });
+
+            $('.radios3').on('click', function () {
+                $('.Answer3').css('background-color', 'transparent');
+            });
+
+            $('.radios4').on('click', function () {
+                $('.Answer4').css('background-color', 'transparent');
+            });
+
+
+            //לשים את הצבע ירוק או אדום כאשר נלחץ על כפתור
+            $('.radios').on('click', function () {
+                if ($(this)[0].defaultValue == "WrongAnswer") //מכריח לעשות במקום האפס
+                    $(this).parent().css('background-color', '#ff3333'); //שנה צבע לאדום
+                else
+                    $(this).parent().css('background-color', '#33cc33'); //שנה צבע לירוק
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <br/>
+    <br/>
+    <div style="font-size:28px; font-weight:bold; font-family:Felix007 Medium Regular; text-align:center">המשך חידון</div>
+    <br/>
+    <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
+        <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">מהו "לשון שלישי"</legend>
+        <div class="Answer Answer1" style="display: inline;"><input type="radio" class="radios radios1" name="radio_quetion1" value="WrongAnswer">תיקון דבריו של מישהו</div>
+        <div class="Answer Answer1" style="display: inline;"><input type="radio" class="radios radios1" name="radio_quetion1" value="WrongAnswer">דברים חסרי טעם</div>
+        <div class="Answer Answer1" style="display: inline;"><input type="radio" class="radios radios1" name="radio_quetion1" value="RightAnswer">רכילות</div>
+    </fieldset>
+    <br/>
+    <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
+        <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">פירוש המילה כרוב בתנ"ך הינו</legend>
+        <div class="Answer Answer2" style="display: inline;"><input type="radio" class="radios radios2" name="radio_quetion2" value="RightAnswer">מלאך</div>
+        <div class="Answer Answer2" style="display: inline;"><input type="radio" class="radios radios2" name="radio_quetion2" value="WrongAnswer">כוהן גדול</div>
+        <div class="Answer Answer2" style="display: inline;"><input type="radio" class="radios radios2" name="radio_quetion2" value="WrongAnswer">חלק פנימי בגוף</div>
+    </fieldset>
+    <br />
+
+    <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
+        <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">מהי הגרסה הנכונה של הביטוי</legend>
+        <div class="Answer Answer3" style="display: inline;"><input type="radio" class="radios radios3" name="radio_quetion3" value="RightAnswer">ליישר את ההדורים</div>
+        <div class="Answer Answer3" style="display: inline;"><input type="radio" class="radios radios3" name="radio_quetion3" value="WrongAnswer">ליישב את ההדורים</div>
+    </fieldset>
+    <br />
+
+    <fieldset style="text-align: center; width: 90%; margin-right: auto; margin-left: auto; direction: rtl;">
+        <legend style="font-size:20px; font-weight:bold; font-family:Gisha;">מה הפירוש של גדיל</legend>
+        <div class="Answer Answer4" style="display: inline;"><input type="radio" class="radios radios4" name="radio_quetion4" value="WrongAnswer">ביטל, הכשיל דבר מה</div>
+        <div class="Answer Answer4" style="display: inline;"><input type="radio" class="radios radios4" name="radio_quetion4" value="RightAnswer">קצוות חוטים היוצאים משולי הבגד</div>
+        <div class="Answer Answer4" style="display: inline;"><input type="radio" class="radios radios4" name="radio_quetion4" value="WrongAnswer">תקווה, סיכוי</div>
+    </fieldset>
+    
+    <br />
+    <button class="button" onclick="location.href='index.html'" style="float:right;">לחזרה</button>
+</body>
+</html>
